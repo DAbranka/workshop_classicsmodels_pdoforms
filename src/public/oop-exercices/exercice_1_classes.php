@@ -1,3 +1,5 @@
+
+
 <html>
 <head><title>PHP OOP</title></head>
 <body>
@@ -6,6 +8,7 @@
 </header>
 <main>
     <?php
+    //declare(strict_types=1);
 
     /* EXERCISE 1
     TODO: Create a class beverage.
@@ -74,7 +77,7 @@
 
     // EXO 1
     function exo_1_classes(){
-        class beverage{
+        class Beverage{
 
             // PROPERTIES
 
@@ -120,7 +123,7 @@
             // GET INFO
         }
 
-        $CocaCola = new beverage();
+        $CocaCola = new Beverage();
 
         $CocaCola ->set_name('CocaCola');
         $CocaCola ->set_temperature('Cold');

@@ -26,4 +26,80 @@
     ?>
 
     <?php
+
+    // EXO 2 EXTENDING
+function exo_2_extending(){
+    class beverage{
+
+        // PROPERTIES
+
+        public $name;
+        public $color;
+        public $price;
+        public $temperature;
+
+        // METHODS
+
+        // NAME
+        function set_name($name){
+            $this ->name =$name;
+        }
+        function get_name(){
+            return $this->name;
+        }
+
+        // COLOR
+        function set_color($color){
+            $this->color = $color;
+        }
+        function get_color(){
+            return $this->color;
+        }
+
+        //PRICE
+        function set_price($price){
+            $this->price = $price;
+        }
+        function get_price(){
+            return $this->price;
+        }
+
+        // TEMPERATURE
+        function set_temperature($temperature){
+            $this->temperature=$temperature;
+        }
+        function get_temperature(){
+            return $this->temperature;
+        }
+
+    }
+
+    class beer extends beverage{
+        public $name;
+        public $price;
+        public $color;
+        public $temperature;
+    }
+
+    $Jupiler = new beer();
+
+    $Jupiler ->set_name('Jupiler');
+    $Jupiler ->set_price('€2,50');
+    $Jupiler ->set_temperature('Cold');
+    $Jupiler ->set_color('Yellow');
+
+    echo "Name: " . $Jupiler->get_name();
+    echo "<br>";
+    echo "Price: " . $Jupiler ->get_price();
+    echo "<br>";
+    echo "Temperature: " . $Jupiler -> get_temperature();
+    echo "<br>";
+    echo "Color: " . $Jupiler -> get_color();
+    echo "<br>";
+}
+echo exo_2_extending();
 ?>
+
+</main>
+</body>
+</html>
